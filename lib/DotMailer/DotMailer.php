@@ -71,7 +71,7 @@ class DotMailer
 
         $this->username = $username;
         $this->password = $password;
-        $this->client = new SoapClient($this->request_url);
+        $this->client = new \SoapClient($this->request_url);
     }
 
     /**
@@ -993,7 +993,7 @@ class InvalidParametersException extends \Exception
     
 }
 
-class InvalidDateTimeFormatException Extends \InvalidParametersException
+class InvalidDateTimeFormatException Extends InvalidParametersException
 {
     
 }
