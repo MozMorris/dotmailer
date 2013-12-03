@@ -1,7 +1,7 @@
 DotMailer
 =========
 
-A php class to interact with the dotMailer API. In order to use this class you will need an account (with API access) from dotMailer (http://www.dotmailer.com).
+A php class to interact with the dotMailer API. In order to use this you'll need a [dotMailer](http://www.dotmailer.com/) account with API access.
 
 Install via Composer
 --------------------
@@ -23,14 +23,18 @@ And then...
 Usage
 -----
 
-To get up and running just provide the class with your API username and password;
+Instantiate the class with your API username and password:
 
     $dotmailer = new DotMailer\DotMailer('username', 'password');
 
-You can then interact with the methods using the same method names as described in the [API documentation](http://www.dotmailer.co.uk/api/). For example to list all address books on your account just use the following
+Then use the `$dotmailer` object to interact with the [API](http://www.dotmailer.co.uk/api/) using the same method names as described in the [documentation](http://www.dotmailer.co.uk/api/). 
+
+Example
+-------
+
+List address books:
 
     $addressBooks = $dotmailer->ListAddressBooks();
-
     foreach ($addressBooks as $book) {
     	print $book->ID  . ' => ' . $book->Name . PHP_EOL;
     }
