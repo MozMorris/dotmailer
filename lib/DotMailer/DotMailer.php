@@ -278,14 +278,14 @@ class DotMailer
 
         foreach ($fields as $key => $item) {
             if (is_array($item)) {
-                $values[] = new SoapVar(
+                $values[] = new \SoapVar(
                                 $item['data'],
                                 $this->typeConversion($item['type']),
                                 $item['type'],
                                 "http://www.w3.org/2001/XMLSchema"
                 );
             } else {
-                $values[] = new SoapVar(
+                $values[] = new \SoapVar(
                                 $item,
                                 XSD_STRING,
                                 "string",
@@ -397,7 +397,7 @@ class DotMailer
 
         $encodedData = base64_encode($data);
 
-        $typedVar = new SoapVar($encodedData, XSD_BASE64BINARY, "string", "http://www.w3.org/2001/XMLSchema");
+        $typedVar = new \SoapVar($encodedData, XSD_BASE64BINARY, "string", "http://www.w3.org/2001/XMLSchema");
 
         $parameters = array(
             'username' => $this->username,
@@ -479,7 +479,7 @@ class DotMailer
      */
     public function CreateAddressBook($name)
     {
-        $book = new stdClass();
+        $book = new \stdClass();
         $book->Name = $name;
         $book->ID = -1;
 
@@ -593,9 +593,9 @@ class DotMailer
 
             foreach ($fields as $key => $item) {
                 if (is_array($item)) {
-                    $values[] = new SoapVar($item['data'], $this->typeConversion($item['type']), $item['type'], "http://www.w3.org/2001/XMLSchema");
+                    $values[] = new \SoapVar($item['data'], $this->typeConversion($item['type']), $item['type'], "http://www.w3.org/2001/XMLSchema");
                 } else {
-                    $values[] = new SoapVar($item, XSD_STRING, "string", "http://www.w3.org/2001/XMLSchema");
+                    $values[] = new \SoapVar($item, XSD_STRING, "string", "http://www.w3.org/2001/XMLSchema");
                 }
                 $keys[] = $key;
             }
@@ -641,9 +641,9 @@ class DotMailer
 
             foreach ($fields as $key => $item) {
                 if (is_array($item)) {
-                    $values[] = new SoapVar($item['data'], $this->typeConversion($item['type']), $item['type'], "http://www.w3.org/2001/XMLSchema");
+                    $values[] = new \SoapVar($item['data'], $this->typeConversion($item['type']), $item['type'], "http://www.w3.org/2001/XMLSchema");
                 } else {
-                    $values[] = new SoapVar($item, XSD_STRING, "string", "http://www.w3.org/2001/XMLSchema");
+                    $values[] = new \SoapVar($item, XSD_STRING, "string", "http://www.w3.org/2001/XMLSchema");
                 }
                 $keys[] = $key;
             }
