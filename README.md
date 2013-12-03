@@ -13,7 +13,7 @@ Install via Composer
        }
     ],
     "require": {
-      "MozMorris/dotmailer": "dev-dev"
+      "MozMorris/dotmailer": "dev-master"
     },
 
 And then...
