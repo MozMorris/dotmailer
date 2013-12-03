@@ -973,32 +973,32 @@ class DotMailer
 
 }
 
-class DotMailerUsernameAndPasswordNotFoundException extends \Exception
+class UsernameAndPasswordNotFoundException extends \Exception
 {
     
 }
 
-class DotMailerMissingRequiredParametersException extends \Exception
+class MissingRequiredParametersException extends \Exception
 {
     
 }
 
-class DotMailerAddressBookNotFoundException extends \Exception
+class AddressBookNotFoundException extends \Exception
 {
     
 }
 
-class DotMailerInvalidParametersException extends \Exception
+class InvalidParametersException extends \Exception
 {
     
 }
 
-class DotMailerInvalidDateTimeFormatException Extends \InvalidParametersException
+class InvalidDateTimeFormatException Extends \InvalidParametersException
 {
     
 }
 
-class DotMailerInvalidFileFormatException extends \Exception
+class InvalidFileFormatException extends \Exception
 {
     
 }
