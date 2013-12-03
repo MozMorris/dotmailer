@@ -26,28 +26,28 @@ class DotMailer
      * @var string
      */
     private $request_url = 'http://apiconnector.com/api.asmx?WSDL';
-    
+
     /**
      * The username used in the API connection.
      *
      * @var string
      */
     private $username;
-    
+
     /**
      * The password used in the API connection.
      *
      * @var string
      */
     private $password;
-    
+
     /**
      * The SoapClient object.
      *
-     * @var resource 
+     * @var resource
      */
     private $client;
-    
+
     /**
      * Contains any errors generated during the last SoapClient call.
      *
@@ -975,30 +975,30 @@ class DotMailer
 
 class UsernameAndPasswordNotFoundException extends \Exception
 {
-    
+
 }
 
 class MissingRequiredParametersException extends \Exception
 {
-    
+
 }
 
 class AddressBookNotFoundException extends \Exception
 {
-    
+
 }
 
 class InvalidParametersException extends \Exception
 {
-    
+
 }
 
 class InvalidDateTimeFormatException Extends InvalidParametersException
 {
-    
+
 }
 
 class InvalidFileFormatException extends \Exception
 {
-    
+
 }
